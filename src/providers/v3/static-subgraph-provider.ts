@@ -141,6 +141,9 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     BTC_BNB,
     ETH_BNB,
   ],
+  [ChainId.BNB_TESTNET]: [
+    WRAPPED_NATIVE_CURRENCY[ChainId.BNB_TESTNET]
+  ],
   [ChainId.AVALANCHE]: [
     WRAPPED_NATIVE_CURRENCY[ChainId.AVALANCHE],
     USDC_AVAX,
@@ -171,7 +174,7 @@ export class StaticV3SubgraphProvider implements IV3SubgraphProvider {
   constructor(
     private chainId: ChainId,
     private poolProvider: IV3PoolProvider
-  ) {}
+  ) { }
 
   public async getPools(
     tokenIn?: Token,

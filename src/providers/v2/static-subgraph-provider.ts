@@ -34,6 +34,7 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   [ChainId.OPTIMISM_GOERLI]: [],
   [ChainId.POLYGON]: [],
   [ChainId.POLYGON_MUMBAI]: [],
+  [ChainId.BNB_TESTNET]: [],
   [ChainId.CELO]: [],
   [ChainId.CELO_ALFAJORES]: [],
   [ChainId.GNOSIS]: [],

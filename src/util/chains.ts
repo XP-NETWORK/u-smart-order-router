@@ -20,6 +20,7 @@ export const SUPPORTED_CHAINS: ChainId[] = [
   ChainId.CELO_ALFAJORES,
   ChainId.CELO,
   ChainId.BNB,
+  ChainId.BNB_TESTNET,
   ChainId.AVALANCHE,
   ChainId.BASE,
   // Gnosis and Moonbeam don't yet have contracts deployed yet
@@ -55,6 +56,8 @@ export const ID_TO_CHAIN_ID = (id: number): ChainId => {
       return ChainId.SEPOLIA;
     case 56:
       return ChainId.BNB;
+    case 97:
+      return ChainId.BNB_TESTNET;
     case 10:
       return ChainId.OPTIMISM;
     case 420:
@@ -101,6 +104,7 @@ export enum ChainName {
   GNOSIS = 'gnosis-mainnet',
   MOONBEAM = 'moonbeam-mainnet',
   BNB = 'bnb-mainnet',
+  BNB_TESTNET = 'bnb-testnet',
   AVALANCHE = 'avalanche-mainnet',
   BASE = 'base-mainnet',
   BASE_GOERLI = 'base-goerli',
@@ -163,6 +167,7 @@ export const NATIVE_NAMES_BY_ID: { [chainId: number]: string[] } = {
   [ChainId.GNOSIS]: ['XDAI'],
   [ChainId.MOONBEAM]: ['GLMR'],
   [ChainId.BNB]: ['BNB', 'BNB', '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee'],
+  [ChainId.BNB_TESTNET]: ['BNB', 'BNB', '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee'],
   [ChainId.AVALANCHE]: [
     'AVAX',
     'AVALANCHE',
@@ -190,6 +195,7 @@ export const NATIVE_CURRENCY: { [chainId: number]: NativeCurrencyName } = {
   [ChainId.GNOSIS]: NativeCurrencyName.GNOSIS,
   [ChainId.MOONBEAM]: NativeCurrencyName.MOONBEAM,
   [ChainId.BNB]: NativeCurrencyName.BNB,
+  [ChainId.BNB_TESTNET]: NativeCurrencyName.BNB,
   [ChainId.AVALANCHE]: NativeCurrencyName.AVALANCHE,
   [ChainId.BASE]: NativeCurrencyName.ETHER,
 };
@@ -204,6 +210,8 @@ export const ID_TO_NETWORK_NAME = (id: number): ChainName => {
       return ChainName.SEPOLIA;
     case 56:
       return ChainName.BNB;
+    case 97:
+      return ChainName.BNB_TESTNET;
     case 10:
       return ChainName.OPTIMISM;
     case 420:
@@ -265,6 +273,8 @@ export const ID_TO_PROVIDER = (id: ChainId): string => {
       return process.env.JSON_RPC_PROVIDER_CELO_ALFAJORES!;
     case ChainId.BNB:
       return process.env.JSON_RPC_PROVIDER_BNB!;
+    case ChainId.BNB_TESTNET:
+      return process.env.JSON_RPC_PROVIDER_BNB_TESTNET!;
     case ChainId.AVALANCHE:
       return process.env.JSON_RPC_PROVIDER_AVALANCHE!;
     case ChainId.BASE:
@@ -345,6 +355,14 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId in ChainId]: Token } = {
     'WMATIC',
     'Wrapped MATIC'
   ),
+  [ChainId.BNB_TESTNET]: new Token(
+    ChainId.BNB_TESTNET,
+    '0x4054402E8FaF7D6e194be714970646dc661AabC5',
+    18,
+    'WBNB',
+    'Wrapped BNB'
+  ),
+
 
   // The Celo native currency 'CELO' implements the erc-20 token standard
   [ChainId.CELO]: new Token(
@@ -475,7 +493,7 @@ class GnosisNativeCurrency extends NativeCurrency {
 }
 
 function isBnb(chainId: number): chainId is ChainId.BNB {
-  return chainId === ChainId.BNB;
+  return chainId === ChainId.BNB || chainId === ChainId.BNB_TESTNET;
 }
 
 class BnbNativeCurrency extends NativeCurrency {
