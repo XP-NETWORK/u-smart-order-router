@@ -24,6 +24,7 @@ export const V3_CORE_FACTORY_ADDRESSES: AddressMap = {
   [ChainId.ARBITRUM_GOERLI]:
     CHAIN_TO_ADDRESSES_MAP[ChainId.ARBITRUM_GOERLI].v3CoreFactoryAddress,
   [ChainId.BNB]: CHAIN_TO_ADDRESSES_MAP[ChainId.BNB].v3CoreFactoryAddress,
+  [ChainId.BNB_TESTNET]: CHAIN_TO_ADDRESSES_MAP[ChainId.BNB_TESTNET].v3CoreFactoryAddress,
   [ChainId.AVALANCHE]:
     CHAIN_TO_ADDRESSES_MAP[ChainId.AVALANCHE].v3CoreFactoryAddress,
   [ChainId.BASE_GOERLI]:
@@ -43,6 +44,7 @@ export const QUOTER_V2_ADDRESSES: AddressMap = {
   [ChainId.ARBITRUM_GOERLI]:
     CHAIN_TO_ADDRESSES_MAP[ChainId.ARBITRUM_GOERLI].quoterAddress,
   [ChainId.BNB]: CHAIN_TO_ADDRESSES_MAP[ChainId.BNB].quoterAddress,
+  [ChainId.BNB_TESTNET]: CHAIN_TO_ADDRESSES_MAP[ChainId.BNB_TESTNET].quoterAddress,
   [ChainId.AVALANCHE]: CHAIN_TO_ADDRESSES_MAP[ChainId.AVALANCHE].quoterAddress,
   [ChainId.BASE_GOERLI]:
     CHAIN_TO_ADDRESSES_MAP[ChainId.BASE_GOERLI].quoterAddress,
