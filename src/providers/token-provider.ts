@@ -382,7 +382,7 @@ export const USDT_BNB = new Token(
 
 export const USDT_BNB_TESTNET = new Token(
   ChainId.BNB_TESTNET,
-  '0x4054402E8FaF7D6e194be714970646dc661AabC5',
+  '0x569681898B7DfDAB7c644Cb2F69C7aA0e3093eBC',
   18,
   'USDT',
   'USDT'

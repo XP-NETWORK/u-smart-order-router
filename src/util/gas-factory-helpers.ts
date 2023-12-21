@@ -118,7 +118,7 @@ export async function getHighestLiquidityV3USDPool(
   providerConfig?: ProviderConfig
 ): Promise<Pool> {
   const usdTokens = usdGasTokensByChain[chainId];
-  const wrappedCurrency = WRAPPED_NATIVE_CURRENCY[chainId]!;
+  const wrappedCurrency = WRAPPED_NATIVE_CURRENCY[chainId];
 
   if (!usdTokens) {
     throw new Error(
@@ -141,6 +141,7 @@ export async function getHighestLiquidityV3USDPool(
     })
     .value();
 
+  console.log({ poolProvider, usdPools, providerConfig })
   const poolAccessor = await poolProvider.getPools(usdPools, providerConfig);
 
   const pools = _([
@@ -460,10 +461,10 @@ export function initSwapRouteFromExisting(
 
   const quoteGasAndPortionAdjusted = swapRoute.portionAmount
     ? portionProvider.getQuoteGasAndPortionAdjusted(
-        swapRoute.trade.tradeType,
-        quoteGasAdjusted,
-        swapRoute.portionAmount
-      )
+      swapRoute.trade.tradeType,
+      quoteGasAdjusted,
+      swapRoute.portionAmount
+    )
     : undefined;
   const routesWithValidQuotePortionAdjusted =
     portionProvider.getRouteWithQuotePortionAdjusted(
@@ -485,10 +486,10 @@ export function initSwapRouteFromExisting(
     blockNumber: BigNumber.from(swapRoute.blockNumber),
     methodParameters: swapRoute.methodParameters
       ? ({
-          calldata: swapRoute.methodParameters.calldata,
-          value: swapRoute.methodParameters.value,
-          to: swapRoute.methodParameters.to,
-        } as MethodParameters)
+        calldata: swapRoute.methodParameters.calldata,
+        value: swapRoute.methodParameters.value,
+        to: swapRoute.methodParameters.to,
+      } as MethodParameters)
       : undefined,
     simulationStatus: swapRoute.simulationStatus,
     portionAmount: swapRoute.portionAmount,
