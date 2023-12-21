@@ -68,6 +68,7 @@ export const UNISWAP_MULTICALL_ADDRESSES: AddressMap = {
   [ChainId.ARBITRUM_GOERLI]:
     CHAIN_TO_ADDRESSES_MAP[ChainId.ARBITRUM_GOERLI].multicallAddress,
   [ChainId.BNB]: CHAIN_TO_ADDRESSES_MAP[ChainId.BNB].multicallAddress,
+  [ChainId.BNB_TESTNET]: CHAIN_TO_ADDRESSES_MAP[ChainId.BNB_TESTNET].multicallAddress,
   [ChainId.AVALANCHE]:
     CHAIN_TO_ADDRESSES_MAP[ChainId.AVALANCHE].multicallAddress,
   [ChainId.BASE_GOERLI]:
