@@ -138,6 +138,7 @@ export const CACHE_SEED_TOKENS: {
   },
   [ChainId.BNB_TESTNET]: {
     USDT: USDT_BNB_TESTNET,
+    WBNB: WRAPPED_NATIVE_CURRENCY[ChainId.BNB_TESTNET],
   },
   [ChainId.AVALANCHE]: {
     USDC: USDC_AVAX,
