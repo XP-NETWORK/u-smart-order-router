@@ -62,7 +62,7 @@ exports.DAI_BNB = new sdk_core_1.Token(sdk_core_1.ChainId.BNB, '0x1AF3F329e8BE15
 exports.ETH_BNB = new sdk_core_1.Token(sdk_core_1.ChainId.BNB, '0x2170Ed0880ac9A755fd29B2688956BD959F933F8', 18, 'ETH', 'ETH');
 exports.USDC_BNB = new sdk_core_1.Token(sdk_core_1.ChainId.BNB, '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d', 18, 'USDC', 'USDC');
 exports.USDT_BNB = new sdk_core_1.Token(sdk_core_1.ChainId.BNB, '0x55d398326f99059fF775485246999027B3197955', 18, 'USDT', 'USDT');
-exports.USDT_BNB_TESTNET = new sdk_core_1.Token(sdk_core_1.ChainId.BNB_TESTNET, '0x4054402E8FaF7D6e194be714970646dc661AabC5', 18, 'USDT', 'USDT');
+exports.USDT_BNB_TESTNET = new sdk_core_1.Token(sdk_core_1.ChainId.BNB_TESTNET, '0x569681898B7DfDAB7c644Cb2F69C7aA0e3093eBC', 18, 'USDT', 'USDT');
 // Celo Tokens
 exports.CELO = new sdk_core_1.Token(sdk_core_1.ChainId.CELO, '0x471EcE3750Da237f93B8E339c536989b8978a438', 18, 'CELO', 'Celo native asset');
 exports.DAI_CELO = new sdk_core_1.Token(sdk_core_1.ChainId.CELO, '0xE4fE50cdD716522A56204352f00AA110F731932d', 18, 'DAI', 'Dai Stablecoin');

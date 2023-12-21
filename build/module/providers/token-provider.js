@@ -55,7 +55,7 @@ export const DAI_BNB = new Token(ChainId.BNB, '0x1AF3F329e8BE154074D8769D1FFa4eE
 export const ETH_BNB = new Token(ChainId.BNB, '0x2170Ed0880ac9A755fd29B2688956BD959F933F8', 18, 'ETH', 'ETH');
 export const USDC_BNB = new Token(ChainId.BNB, '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d', 18, 'USDC', 'USDC');
 export const USDT_BNB = new Token(ChainId.BNB, '0x55d398326f99059fF775485246999027B3197955', 18, 'USDT', 'USDT');
-export const USDT_BNB_TESTNET = new Token(ChainId.BNB_TESTNET, '0x4054402E8FaF7D6e194be714970646dc661AabC5', 18, 'USDT', 'USDT');
+export const USDT_BNB_TESTNET = new Token(ChainId.BNB_TESTNET, '0x569681898B7DfDAB7c644Cb2F69C7aA0e3093eBC', 18, 'USDT', 'USDT');
 // Celo Tokens
 export const CELO = new Token(ChainId.CELO, '0x471EcE3750Da237f93B8E339c536989b8978a438', 18, 'CELO', 'Celo native asset');
 export const DAI_CELO = new Token(ChainId.CELO, '0xE4fE50cdD716522A56204352f00AA110F731932d', 18, 'DAI', 'Dai Stablecoin');
