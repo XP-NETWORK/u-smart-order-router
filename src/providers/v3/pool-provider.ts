@@ -97,7 +97,7 @@ export class V3PoolProvider implements IV3PoolProvider {
     const poolAddressSet: Set<string> = new Set<string>();
     const sortedTokenPairs: Array<[Token, Token, FeeAmount]> = [];
     const sortedPoolAddresses: string[] = [];
-
+    console.log("FunctionGetPools", tokenPairs);
     for (const tokenPair of tokenPairs) {
       const [tokenA, tokenB, feeAmount] = tokenPair;
 
@@ -106,6 +106,7 @@ export class V3PoolProvider implements IV3PoolProvider {
         tokenB,
         feeAmount
       );
+      console.log("FunctionGetPools", { poolAddress, token0, token1 });
 
       if (poolAddressSet.has(poolAddress)) {
         continue;
@@ -115,6 +116,8 @@ export class V3PoolProvider implements IV3PoolProvider {
       sortedTokenPairs.push([token0, token1, feeAmount]);
       sortedPoolAddresses.push(poolAddress);
     }
+
+    console.log("FunctionGetPools", { poolAddressSet, sortedTokenPairs, sortedPoolAddresses });
 
     log.debug(
       `getPools called with ${tokenPairs.length} token pairs. Deduped down to ${poolAddressSet.size}`
@@ -128,6 +131,7 @@ export class V3PoolProvider implements IV3PoolProvider {
         providerConfig
       ),
     ]);
+    console.log("FunctionGetPools", { slot0Results, liquidityResults });
 
     log.info(
       `Got liquidity and slot0s for ${poolAddressSet.size} pools ${providerConfig?.blockNumber
@@ -144,6 +148,8 @@ export class V3PoolProvider implements IV3PoolProvider {
       const slot0Result = slot0Results[i];
       const liquidityResult = liquidityResults[i];
 
+      console.log("FunctionGetPools forloop", JSON.stringify({ slot0Result, liquidityResult }));
+
       // These properties tell us if a pool is valid and initialized or not.
       if (
         !slot0Result?.success ||
@@ -151,6 +157,9 @@ export class V3PoolProvider implements IV3PoolProvider {
         slot0Result.result.sqrtPriceX96.eq(0)
       ) {
         const [token0, token1, fee] = sortedTokenPairs[i]!;
+
+        console.log("FunctionGetPools push", JSON.stringify({ token0, token1, fee }));
+
         invalidPools.push([token0, token1, fee]);
 
         continue;
@@ -198,6 +207,7 @@ export class V3PoolProvider implements IV3PoolProvider {
         feeAmount: FeeAmount
       ): Pool | undefined => {
         const { poolAddress } = this.getPoolAddress(tokenA, tokenB, feeAmount);
+        console.log({ poolAddress, poolAddressToPool })
         return poolAddressToPool[poolAddress];
       },
       getPoolByAddress: (address: string): Pool | undefined =>
