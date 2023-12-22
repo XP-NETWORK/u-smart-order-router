@@ -206,6 +206,7 @@ export class V3PoolProvider implements IV3PoolProvider {
         tokenB: Token,
         feeAmount: FeeAmount
       ): Pool | undefined => {
+        console.log("I SHOULD BE CALLED~~~~!!!!!!!!!!")
         const { poolAddress } = this.getPoolAddress(tokenA, tokenB, feeAmount);
         console.log({ poolAddress, poolAddressToPool })
         return poolAddressToPool[poolAddress];
