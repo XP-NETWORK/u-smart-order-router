@@ -238,7 +238,7 @@ export class V3PoolProvider implements IV3PoolProvider {
     const cacheKey = `${this.chainId}/${token0.address}/${token1.address}/${feeAmount}`;
     console.log({ cacheKey })
     const cachedAddress = this.POOL_ADDRESS_CACHE[cacheKey];
-    console.log({ POOL_ADDRESS_CACHE: this.POOL_ADDRESS_CACHE })
+    console.log({ cachedAddress,  POOL_ADDRESS_CACHE: this.POOL_ADDRESS_CACHE })
     if (cachedAddress) {
       return { poolAddress: cachedAddress, token0, token1 };
     }

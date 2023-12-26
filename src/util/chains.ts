@@ -357,7 +357,7 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId in ChainId]: Token } = {
   ),
   [ChainId.BNB_TESTNET]: new Token(
     ChainId.BNB_TESTNET,
-    '0x4054402E8FaF7D6e194be714970646dc661AabC5',
+    '0x9f3f5b8A8557DEB336C768F04c0C9eEBB7016980',
     18,
     'WBNB',
     'Wrapped BNB'

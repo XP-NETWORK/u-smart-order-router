@@ -68,6 +68,7 @@ export declare const ETH_BNB: Token;
 export declare const USDC_BNB: Token;
 export declare const USDT_BNB: Token;
 export declare const USDT_BNB_TESTNET: Token;
+export declare const USDC_BNB_TESTNET: Token;
 export declare const CELO: Token;
 export declare const DAI_CELO: Token;
 export declare const CUSD_CELO: Token;

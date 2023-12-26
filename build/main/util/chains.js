@@ -282,7 +282,7 @@ exports.WRAPPED_NATIVE_CURRENCY = {
     [sdk_core_1.ChainId.ARBITRUM_GOERLI]: new sdk_core_1.Token(sdk_core_1.ChainId.ARBITRUM_GOERLI, '0xe39Ab88f8A4777030A534146A9Ca3B52bd5D43A3', 18, 'WETH', 'Wrapped Ether'),
     [sdk_core_1.ChainId.POLYGON]: new sdk_core_1.Token(sdk_core_1.ChainId.POLYGON, '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270', 18, 'WMATIC', 'Wrapped MATIC'),
     [sdk_core_1.ChainId.POLYGON_MUMBAI]: new sdk_core_1.Token(sdk_core_1.ChainId.POLYGON_MUMBAI, '0x9c3C9283D3e44854697Cd22D3Faa240Cfb032889', 18, 'WMATIC', 'Wrapped MATIC'),
-    [sdk_core_1.ChainId.BNB_TESTNET]: new sdk_core_1.Token(sdk_core_1.ChainId.BNB_TESTNET, '0x4054402E8FaF7D6e194be714970646dc661AabC5', 18, 'WBNB', 'Wrapped BNB'),
+    [sdk_core_1.ChainId.BNB_TESTNET]: new sdk_core_1.Token(sdk_core_1.ChainId.BNB_TESTNET, '0x9f3f5b8A8557DEB336C768F04c0C9eEBB7016980', 18, 'WBNB', 'Wrapped BNB'),
     // The Celo native currency 'CELO' implements the erc-20 token standard
     [sdk_core_1.ChainId.CELO]: new sdk_core_1.Token(sdk_core_1.ChainId.CELO, '0x471EcE3750Da237f93B8E339c536989b8978a438', 18, 'CELO', 'Celo native asset'),
     [sdk_core_1.ChainId.CELO_ALFAJORES]: new sdk_core_1.Token(sdk_core_1.ChainId.CELO_ALFAJORES, '0xF194afDf50B03e69Bd7D057c1Aa9e10c9954E4C9', 18, 'CELO', 'Celo native asset'),

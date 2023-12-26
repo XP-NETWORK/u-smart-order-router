@@ -382,11 +382,20 @@ export const USDT_BNB = new Token(
 
 export const USDT_BNB_TESTNET = new Token(
   ChainId.BNB_TESTNET,
-  '0x569681898B7DfDAB7c644Cb2F69C7aA0e3093eBC',
+  '0xa85233C63b9Ee964Add6F2cffe00Fd84eb32338f',
   18,
   'USDT',
   'USDT'
 );
+
+export const USDC_BNB_TESTNET = new Token(
+  ChainId.BNB_TESTNET,
+  '0x4A679253410272dd5232B3Ff7cF5dbB88f295319',
+  18,
+  'USDC',
+  'USDC'
+);
+
 
 // Celo Tokens
 export const CELO = new Token(
@@ -797,6 +806,8 @@ export const USDC_ON = (chainId: ChainId): Token => {
       return USDC_MOONBEAM;
     case ChainId.BNB:
       return USDC_BNB;
+    case ChainId.BNB_TESTNET:
+      return USDC_BNB_TESTNET;
     case ChainId.AVALANCHE:
       return USDC_AVAX;
     case ChainId.BASE:
