@@ -31,6 +31,7 @@ import {
   USDC_AVAX,
   USDC_BASE,
   USDC_BNB,
+  USDC_BNB_TESTNET,
   USDC_ETHEREUM_GNOSIS,
   USDC_MAINNET,
   USDC_MOONBEAM,
@@ -172,7 +173,7 @@ const baseTokensByChain: { [chainId in ChainId]?: Token[] } = {
     WGLMR_MOONBEAM,
   ],
   [ChainId.BNB]: [DAI_BNB, USDC_BNB, USDT_BNB],
-  [ChainId.BNB_TESTNET]: [USDT_BNB_TESTNET],
+  [ChainId.BNB_TESTNET]: [USDT_BNB_TESTNET, USDC_BNB_TESTNET],
   [ChainId.AVALANCHE]: [DAI_AVAX, USDC_AVAX],
   [ChainId.BASE]: [USDC_BASE],
 };
